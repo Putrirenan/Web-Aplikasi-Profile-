@@ -1,13 +1,10 @@
-  
-runtime: php55
-
+runtime: python27
+api_version: 1
+threadsafe: true
 handlers:
-- url: /styles
-  static_dir: styles
-  
-- url: /images/(.*\.(gif|png|jpg))
-  static_files: images/\1
-  upload: images/(.*\.(gif|png|jpg))
-  
-- url: /.*
-  script: index.php
+- url: /
+  static_files: index.html
+  upload: index.html
+- unrl: /style.css
+  static_files: style.css
+  upload: style.css
