@@ -1,4 +1,4 @@
-runtime: python27
+runtime: php55
 api_version: 1
 threadsafe: true
 handlers:
@@ -8,3 +8,6 @@ handlers:
 - url: /style.css
   static_files: style.css
   upload: style.css
+- url: /img/(.*\.(gif|png|jpg))
+  static_files: img/\1
+  upload: images/(.*\.(gif|png|jpg))
